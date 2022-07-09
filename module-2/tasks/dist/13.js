@@ -1,6 +1,6 @@
 // Данные о пользователе хранятся в массиве.
 // В первой ячейки хранится имя, а в третей возраст.
 // Скопируйте эти значения.
-const user = ["UserName", "male", 42];
-const [name, _, age] = user;
+var user = ["UserName", "male", 42];
+var name = user[0], _ = user[1], age = user[2];
 console.log(name, age);

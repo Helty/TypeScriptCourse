@@ -1,7 +1,7 @@
 // скопировать свойства объекта в переменные
-const user = {
-  name: "UserName",
-  age: 42,
+var user = {
+    name: "UserName",
+    age: 42
 };
-const { name, age } = user;
+var name = user.name, age = user.age;
 console.log(name, age);

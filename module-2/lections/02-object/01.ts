@@ -1,8 +1,9 @@
 {
-    const user = new Object()
+  const user = new Object();
 }
 
 {
-    // литерал
-    const user:any = {};
+  // литерал
+  const user: any = {};
+  //почитать про литерал
 }
