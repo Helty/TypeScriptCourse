@@ -1,3 +1,3 @@
 // Создать переменную isEmpty, присвоить ей значение true. Вывести значение
-let isEmpty: boolean = true;
+var isEmpty = true;
 console.log(isEmpty);
