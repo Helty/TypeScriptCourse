@@ -1,5 +1,5 @@
 // Создать функцию sum для сложения двух чисел
-function sum(a: number, b: number) {
+function sum(a: number, b: number): number {
   return a + b;
 }
 
