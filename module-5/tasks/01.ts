@@ -5,3 +5,17 @@
 // 3 - выбрать элемент с id равным passwordField внутри формы
 // Вывести элементы в консоль
 
+async function main() {
+  await browser.url(
+    "https://testspace.orange.local.learn.ispringdev.com/login/"
+  );
+
+  const form = await $(".form");
+  console.log(form);
+  const loginField = await form.$("#loginField");
+  console.log(loginField);
+  const passwordField = await form.$("#passwordField");
+  console.log(passwordField);
+}
+
+main();
