@@ -3,3 +3,18 @@
 
 //const page = new Page("Yandex", 'https://yandex.ru')
 //page.open()
+
+class Page {
+  protected url: string;
+  protected name: string;
+  constructor(name: string, url: string) {
+    this.url = url;
+    this.name = name;
+  }
+
+  public open() {
+    console.log(`Переход на страницу ${this.name}: ${this.url}`);
+  }
+}
+
+export { Page };
