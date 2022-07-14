@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npx ts-node",
-    "serve": "npx http-server module-5",
+    "server": "npx http-server module-5",
     "run": "npx wdio run ./module-5/wdio.config.ts"
   },
   "keywords": [],

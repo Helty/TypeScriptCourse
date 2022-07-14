@@ -1,6 +1,6 @@
 describe("Проверка счетчика ", () => {
   beforeEach(async () => {
-    await browser.url("http://127.0.0.1:5500/module-5/index.html");
+    await browser.url("http://127.0.0.1:8080");
   });
 
   it("Проверка операции increment", async () => {
