@@ -59,27 +59,24 @@ class UserTeamPage {
   }
 
   async deleteUsers(usersNeedle: string) {
-    await this.searchField.click();
-    await this.browser.keys(usersNeedle);
+    await this.usersSearch(usersNeedle);
 
-    const usersFounded = await this.userList;
-
-    for (const user of usersFounded) {
+    for (const user of await this.userList) {
       await user.click();
       await this.userDeleteButton.click();
       await this.removeUserPopup.removeButton.click();
     }
   }
 
-  async getAuthorsCounts(authorCountSetting: AuthorCounts) {
+  async getAuthorsCount(authorCountSetting: AuthorCounts) {
     return Number((await (await this.getValueOfCountUsersArray)[0].getText()).split('/')[authorCountSetting]);
   }
 
-  async getReviewersCounts() {
+  async getReviewersCount() {
     return Number(await (await this.getValueOfCountUsersArray)[1].getText());
   }
 
-  async getAllUserCounts() {
+  async getAllUserCount() {
     return Number(await (await this.getValueOfCountUsersArray)[2].getText());
   }
 }

@@ -13,16 +13,16 @@ describe("User manipulation test", () => {
                 await authPage.submitForm("owner", "12345Q");
                 await userTeamPage.open();
 
-                const authorsCountCurrent = await userTeamPage.getAuthorsCounts(AuthorCounts.current);
-                const reviewersCount = await userTeamPage.getReviewersCounts();
-                const usersCount = await userTeamPage.getAllUserCounts();
+                const authorsCountCurrent = await userTeamPage.getAuthorsCount(AuthorCounts.current);
+                const reviewersCount = await userTeamPage.getReviewersCount();
+                const usersCount = await userTeamPage.getAllUserCount();
 
                 await userTeamPage.addNewUser("test@test.com", UserPermissions.Author);
 
                 //авторы увеличились, ревьюеров не изменилось, общее колличество увеличилось
-                expect(await userTeamPage.getReviewersCounts()).toEqual(reviewersCount);
-                expect(await userTeamPage.getAllUserCounts()).toEqual((usersCount + 1));
-                expect(await userTeamPage.getAuthorsCounts(AuthorCounts.current)).toEqual((authorsCountCurrent + 1));
+                expect(await userTeamPage.getReviewersCount()).toEqual(reviewersCount);
+                expect(await userTeamPage.getAllUserCount()).toEqual((usersCount + 1));
+                expect(await userTeamPage.getAuthorsCount(AuthorCounts.current)).toEqual((authorsCountCurrent + 1));
             });
 
             it("User should be found in the search bar.", async () => {
