@@ -49,13 +49,8 @@ class UserTeamPage {
     await this.teamExpandButton.click();
   }
 
-  async userSearch(userNeedle: string) {
-    const searchField = await this.searchField;
-    if (await searchField.getValue())
-    {
-      await searchField.clearValue();
-    }
-    await searchField.addValue(userNeedle);
+  async usersSearch(userNeedle: string) {
+    await this.searchField.setValue(userNeedle);
   }
 
   async addNewUser(email: string, userPermission: UserPermissions) {
